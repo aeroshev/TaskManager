@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+    PostgresDatabase:
+        image: postgres:12.0
+        environment: 
+            - POSTGRES_DB=task_manager_db
+            - POSTGRES_USER=task_manager
+            - POSTGRES_PASSWORD=secr3t
+        ports: 
+            - 5432:5432
+    DjangoLogic:
+        image: aeroshev/task-manager-django:latest
+        ports: 
+            - 8000:8000
+        depends_on: 
+            - PostgresDatabase
