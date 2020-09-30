@@ -5,3 +5,4 @@ WORKDIR /backend-django-taskmanager
 COPY requirements.txt /backend-django-taskmanager/
 RUN pip install -r requirements.txt
 COPY . /backend-django-taskmanager/
+CMD ["python", "task_manager/manage.py", "runserver", "0.0.0.0:8000"]
