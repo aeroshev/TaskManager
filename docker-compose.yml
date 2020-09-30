@@ -6,7 +6,7 @@ services:
         environment: 
             - POSTGRES_DB=task_manager_db
             - POSTGRES_USER=task_manager
-            - POSTGRES_PASSWORD=secr3t
+            - POSTGRES_PASSWORD="${_PASSWORD_DB}"
         ports: 
             - 5432:5432
     DjangoLogic:
