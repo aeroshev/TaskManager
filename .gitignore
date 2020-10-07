@@ -1,4 +1,5 @@
-task_manager_env
 .idea
 .env
 __pycache__
+Docs
+

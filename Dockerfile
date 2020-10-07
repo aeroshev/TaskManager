@@ -1,8 +1,19 @@
 FROM python:3.8.0
+
 ENV PYTHONUNBUFFERED=1
+
+RUN pip3 install pipenv
+
 RUN mkdir /code
 WORKDIR /code
-COPY requirements.txt /code/
-RUN pip install -r requirements.txt
-COPY . /code/
-CMD ["python", "task_manager/manage.py", "runserver", "0.0.0.0:8000"]
+
+COPY Pipfile ./
+COPY Pipfile.lock ./
+
+RUN set -ex && pipenv install --deploy --system
+
+COPY . .
+
+EXPOSE 8000
+
+CMD ["gunicorn", "-b0.0.0.0:8000", "wsgi:app"]
