@@ -1,5 +1,13 @@
-.idea
-.env
-__pycache__
-Docs
+/.idea/
 
+*.env
+
+__pycache__/
+
+/.pytest_cache
+
+/.coverage
+
+/.mypy_cache
+
+/backend/apps/core/migrations/
