@@ -1,7 +1,15 @@
-.idea
+/.idea/
 
-.env
+*.env
 
-__pycache__
+__pycache__/
 
+codestyle_check
 
+/.pytest_cache
+
+/.coverage
+
+/.mypy_cache
+
+/apps/core/migrations/
