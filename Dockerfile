@@ -15,5 +15,3 @@ RUN set -ex && pipenv install --deploy --system
 COPY . .
 
 EXPOSE 8000
-
-CMD ["gunicorn", "-w 4","-b 0.0.0.0:8000", "apps.wsgi:application"]

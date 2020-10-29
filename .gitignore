@@ -4,12 +4,10 @@
 
 __pycache__/
 
-codestyle_check
-
 /.pytest_cache
 
 /.coverage
 
 /.mypy_cache
 
-/apps/core/migrations/
+/backend/apps/core/migrations/
