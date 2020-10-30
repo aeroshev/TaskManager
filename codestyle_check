@@ -1,6 +1,6 @@
 echo '-> isort worked'
-isort apps --check-only -rc
+isort backend --check-only -rc
 echo '-> flake8 worked'
-flake8 apps
+flake8 backend
 echo '-> mypy worked'
-mypy apps
+mypy backend
