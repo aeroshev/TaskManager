@@ -17,6 +17,8 @@ python-dotenv = "*"
 gunicorn = "*"
 drf-nested-routers = "*"
 coreapi = "*"
+djoser = "*"
+djangorestframework-simplejwt = "*"
 
 [requires]
 python_version = "3.8"
