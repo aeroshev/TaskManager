@@ -1,10 +1,11 @@
-from django.db import models
 from uuid import uuid4
 
-from core.models.users import User
+from django.db import models
+
 from core.models.roles import Role
-from core.models.teams import Team
 from core.models.task import Task
+from core.models.teams import Team
+from core.models.users import User
 
 
 class Member(models.Model):
@@ -36,12 +37,13 @@ class Member(models.Model):
     )
     task = models.ManyToManyField(
         Task,
-        related_name='members',
-        through='',
-        through_fields=()
+        related_name='members'
     )
 
     class Meta:
         db_table = 'members'
         verbose_name = 'Участник команды'
         verbose_name_plural = 'Участники команды'
+        constraints = [
+            models.UniqueConstraint(fields=['team', 'role'], name='unique_role_team')
+        ]

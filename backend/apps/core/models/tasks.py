@@ -1,8 +1,9 @@
-from django.db import models
 from uuid import uuid4
 
-from core.models.statuses import Status
+from django.db import models
+
 from core.models.projects import Project
+from core.models.statuses import Status
 
 
 class Task(models.Model):
@@ -41,3 +42,7 @@ class Task(models.Model):
         db_table = 'tasks'
         verbose_name = 'Задание'
         verbose_name_plural = 'Задания'
+        constraints = [
+            models.UniqueConstraint(fields=['id', 'project'], name='unique_task_project'),
+            models.UniqueConstraint(fields=['previous_task'], name='unique_previous_task')
+        ]

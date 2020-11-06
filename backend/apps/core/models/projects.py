@@ -1,5 +1,7 @@
-from django.db import models
 from uuid import uuid4
+
+from django.db import models
+from django.db.models.fields.files import FieldFile
 
 from core.models.teams import Team
 
@@ -27,6 +29,10 @@ class Project(models.Model):
         on_delete=models.PROTECT,
         help_text='Ссылка на команду проекта'
     )
+    docs = models.FileField(
+        upload_to='',
+        help_text=''
+    )  # type: FieldFile
 
     class Meta:
         db_table = 'projects'
