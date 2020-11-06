@@ -11,6 +11,10 @@ class Team(models.Model):
         default=uuid4,
         editable=False
     )  # type: str
+    name = models.CharField(
+        max_length=1024,
+        help_text='Название команды'
+    )  # type: str
 
     class Meta:
         db_table = 'teams'

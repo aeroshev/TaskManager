@@ -14,6 +14,10 @@ class Task(models.Model):
         default=uuid4,
         editable=False
     )  # type: str
+    description = models.CharField(
+        max_length=2048,
+        help_text='Описание задачи'
+    )  # type: str
     status = models.ForeignKey(
         Status,
         related_name='tasks',
@@ -27,7 +31,10 @@ class Task(models.Model):
         help_text='Ссылка на проект'
     )
     previous_task = models.OneToOneField(
-
+        'self',
+        null=True,
+        related_name='next_task',
+        on_delete=models.CASCADE
     )
 
     class Meta:

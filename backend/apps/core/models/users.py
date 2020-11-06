@@ -13,7 +13,7 @@ class User(models.Model):
     )  # type: str
     username = models.CharField(
         max_length=64,
-        unqiue=True,
+        unique=True,
         verbose_name='логин',
         help_text='логин пользователя'
     )  # type: str

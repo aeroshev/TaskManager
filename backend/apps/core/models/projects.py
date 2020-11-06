@@ -17,10 +17,14 @@ class Project(models.Model):
         max_length=1024,
         help_text='Описание проекта'
     )  # type: str
+    product_name = models.CharField(
+        max_length=512,
+        help_text='Имя продукта'
+    )  # type: str
     team = models.ForeignKey(
         Team,
         related_name='projects',
-        on_delete=mdoels.PROTECT,
+        on_delete=models.PROTECT,
         help_text='Ссылка на команду проекта'
     )
 
