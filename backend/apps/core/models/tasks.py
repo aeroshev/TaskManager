@@ -21,6 +21,7 @@ class Task(models.Model):
     )  # type: str
     status = models.ForeignKey(
         Status,
+        null=True,
         related_name='tasks',
         on_delete=models.SET_NULL,
         help_text='Ссылка на тип задания'
@@ -35,7 +36,7 @@ class Task(models.Model):
         'self',
         null=True,
         related_name='next_task',
-        on_delete=models.CASCADE
+        on_delete=models.SET_NULL
     )
 
     class Meta:
