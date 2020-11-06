@@ -3,7 +3,7 @@ from uuid import uuid4
 from django.db import models
 
 from core.models.roles import Role
-from core.models.task import Task
+from core.models.tasks import Task
 from core.models.teams import Team
 from core.models.users import User
 
