@@ -7,6 +7,7 @@ verify_ssl = true
 pytest = "*"
 flake8 = "*"
 mypy = "*"
+isort = "*"
 
 [packages]
 django = "*"
@@ -14,6 +15,11 @@ djangorestframework = "*"
 psycopg2-binary = "*"
 python-dotenv = "*"
 gunicorn = "*"
+drf-nested-routers = "*"
+coreapi = "*"
+djoser = "*"
+djangorestframework-simplejwt = "*"
+pillow = "*"
 
 [requires]
 python_version = "3.8"
