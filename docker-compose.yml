@@ -1,26 +1,62 @@
 version: "3.8"
 
 services:
+    # PostgrSQL Service
     postgres-database:
         image: postgres:12.0
         container_name: tm-database
-        restart: always
+        restart: unless-stopped
+        tty: true
         env_file:
           - backend/.env
         ports: 
             - 5432:5432
-    web:
+        volumes:
+          - dbdata:/var/lib/postgres
+        networks:
+          - app-network
+
+
+    # Nginx Service
+    web-server:
+        build: ./nginx
+        container_name: tm-nginx
+        restart: unless-stopped
+        tty: true
+        ports:
+          - 80:80
+          - 443:443
+        depends_on:
+          - application-server
+        networks:
+          - app-network
+
+    # Django Service
+    application-server:
         build: .
         command: bash -c "python3 manage.py makemigrations &&
                           python3 manage.py migrate &&
                           gunicorn -w 4 -b 0.0.0.0:8000 backend.wsgi:application"
         container_name: tm-backend
         volumes:
-        - .:/code
-        restart: always
+          - .:/code
+        restart: unless-stopped
+        tty: true
         env_file:
             - backend/.env
         ports: 
             - 8000:8000
         depends_on: 
             - postgres-database
+        networks:
+          - app-network
+
+# Docker Networks
+networks:
+  app-network:
+      driver: bridge
+
+# Volumes
+volumes:
+  dbdata:
+      driver: local
