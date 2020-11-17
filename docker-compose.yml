@@ -52,7 +52,7 @@ services:
           - app-network
 
     # Angular Service
-    frontend:
+    frontend-server:
       build:
         context: frontend
         dockerfile: Dockerfile
