@@ -51,6 +51,27 @@ services:
         networks:
           - app-network
 
+    # Angular Service
+    frontend-server:
+      build:
+        context: frontend
+        dockerfile: Dockerfile
+        args:
+          NODE_ENV: "development"
+      command: npm start
+      container_name: tm-frontend
+      volumes:
+        - ./frontend:/code
+        - /code/node_modules
+      restart: unless-stopped
+      tty: true
+      ports:
+        - 3000:3000
+      environment:
+        HOST: "0.0.0.0"
+      networks:
+        - app-network
+
 # Docker Networks
 networks:
   app-network:
