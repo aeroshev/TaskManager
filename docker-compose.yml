@@ -51,7 +51,7 @@ services:
         networks:
           - app-network
 
-    # Angular Service
+    # React Service
     frontend-server:
       build:
         context: frontend
