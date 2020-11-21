@@ -24,9 +24,10 @@ RUN npm --version && apk add --no-cache \
     wget \
     zlib-dev
 
+
 # Installing dependencies:
 WORKDIR /code
-COPY package.json package-lock.json /code/
+COPY package.json yarn.lock /code/
 
 # We do not need to tweak this command, `$NODE_ENV` does it for us.
 RUN npm install
@@ -37,5 +38,4 @@ COPY . /code
 
 
 # Project initialization:
-EXPOSE 4200
-
+EXPOSE 4000
