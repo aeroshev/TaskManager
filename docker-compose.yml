@@ -67,8 +67,6 @@ services:
       tty: true
       ports:
         - 3000:3000
-      depends_on:
-        - application-server
       environment:
         HOST: "0.0.0.0"
       networks:
