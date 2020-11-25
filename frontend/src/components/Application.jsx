@@ -4,8 +4,8 @@ import {
     Switch,
     Route
 } from 'react-router-dom';
-import { Home } from './Home'
-import { PersonalPage } from './PersonalPage';
+import { Home } from './HomePage/Home'
+import { WorkSpacePage } from './WorkSpace/WorkSpacePage';
 
 
 export function Application() {
@@ -16,7 +16,7 @@ export function Application() {
                     <Home/>
                 </Route>
                 <Route path='/content/' exact>
-                    <PersonalPage/>
+                    <WorkSpacePage/>
                 </Route>
             </Switch>
         </Router>

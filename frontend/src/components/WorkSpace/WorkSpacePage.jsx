@@ -1,10 +1,10 @@
 import React from 'react';
 
 
-export function Home() {
+export function WorkSpacePage() {
     return (
         <div>
-            Hello, world!
+            Hello, from page!
         </div>
     );
 }

@@ -1,10 +1,10 @@
 import React from 'react';
 
 
-export function PersonalPage() {
+export function Card() {
     return (
         <div>
-            Hello, from page!
+            Card!
         </div>
     );
 }
