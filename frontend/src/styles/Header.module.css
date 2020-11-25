@@ -1,0 +1,36 @@
+.header {
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #415BA3;
+}
+
+.brandName {
+    color: #F3E3B9;
+    font-size: xx-large;
+    text-align: left;
+    padding: 10px;
+}
+
+.containerHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.userName {
+    width: auto;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.avatar {
+    width: 60px;
+    height: 58px;
+    border-radius: 100px;
+    background: url(https://www.freepngimg.com/thumb/face/8-will-smith-face-png-image.png) no-repeat center center;
+    background-size: 70%;
+    border: 1px solid #d9d9d9;
+}

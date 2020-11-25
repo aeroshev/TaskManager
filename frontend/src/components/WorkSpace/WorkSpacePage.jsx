@@ -1,10 +1,14 @@
 import React from 'react';
+import { Header } from '../Header'
 
 
 export function WorkSpacePage() {
     return (
         <div>
-            Hello, from page!
+            <Header/>
+            <div>
+                Hello, from page!
+            </div>
         </div>
     );
 }

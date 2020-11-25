@@ -21,8 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a0e278ef-4eaa-4a71-bb63-808b4fb0a2a1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/HomePage/HeaderHome.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HomePage/HeaderHome.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/HomePage/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HomePage/Home.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/Home.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/Home.module.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
