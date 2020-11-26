@@ -1,9 +1,9 @@
 import React from 'react';
 
-export default function Card() {
+export default function Footer() {
   return (
     <div>
-      Card!
+      Footer
     </div>
   );
 }

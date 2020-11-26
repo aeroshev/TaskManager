@@ -20,10 +20,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a0e278ef-4eaa-4a71-bb63-808b4fb0a2a1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/HomePage/HeaderHome.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HomePage/HeaderHome.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/Home.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/Home.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Application.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Application.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/HomePage/Card.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HomePage/Card.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/HomePage/CardList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HomePage/CardList.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/HomePage/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HomePage/Home.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/WorkSpace/WorkSpacePage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/WorkSpace/WorkSpacePage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,13 +57,17 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="js.linters.configure.manually.selectedeslint" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
@@ -67,6 +78,23 @@
       <recent name="$PROJECT_DIR$/src/components/WorkSpace" />
       <recent name="$PROJECT_DIR$/src/components/HomePage" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="lint" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="lint" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.lint" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
   <component name="SvnConfiguration">
@@ -81,6 +109,7 @@
       <updated>1605986452380</updated>
       <workItem from="1605986454155" duration="78000" />
       <workItem from="1606326294702" duration="2544000" />
+      <workItem from="1606406777115" duration="1889000" />
     </task>
     <servers />
   </component>
@@ -100,10 +129,31 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="703" y="309" key="#JavaScript" timestamp="1606327176655">
-      <screen x="0" y="23" width="2560" height="1362" />
+    <state x="1140" y="618" width="1136" height="441" key="#ESLint" timestamp="1606407768421">
+      <screen x="0" y="0" width="2560" height="1440" />
     </state>
+    <state x="1140" y="618" width="1136" height="441" key="#ESLint/0.0.2560.1440@0.0.2560.1440" timestamp="1606407768421" />
+    <state x="703" y="302" key="#JavaScript" timestamp="1606408963580">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="703" y="302" key="#JavaScript/0.0.2560.1440@0.0.2560.1440" timestamp="1606408963580" />
     <state x="703" y="309" key="#JavaScript/0.23.2560.1362@0.23.2560.1362" timestamp="1606327176655" />
+    <state width="2537" height="675" key="GridCell.Tab.0.bottom" timestamp="1606408640755">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2537" height="675" key="GridCell.Tab.0.bottom/0.0.2560.1440@0.0.2560.1440" timestamp="1606408640755" />
+    <state width="2537" height="675" key="GridCell.Tab.0.center" timestamp="1606408640753">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2537" height="675" key="GridCell.Tab.0.center/0.0.2560.1440@0.0.2560.1440" timestamp="1606408640753" />
+    <state width="2537" height="675" key="GridCell.Tab.0.left" timestamp="1606408640752">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2537" height="675" key="GridCell.Tab.0.left/0.0.2560.1440@0.0.2560.1440" timestamp="1606408640752" />
+    <state width="2537" height="675" key="GridCell.Tab.0.right" timestamp="1606408640754">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2537" height="675" key="GridCell.Tab.0.right/0.0.2560.1440@0.0.2560.1440" timestamp="1606408640754" />
     <state x="787" y="395" key="SettingsEditor" timestamp="1606326546901">
       <screen x="0" y="23" width="2560" height="1362" />
     </state>
