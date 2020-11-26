@@ -37,3 +37,9 @@ And finally run in root folder
 ```
 docker-compose up --build
 ```
+
+## Access to applications
+`Frontend` available on `localhost:3000` <br>
+`Backend` available on `localhost:8000/api/` <br>
+ or on `https://localhost/api/` where is `localhost` temporary domain name <br>
+this is access use nginx proxy
