@@ -1,24 +1,27 @@
 import React from 'react';
 import {
-    BrowserRouter as Router,
-    Switch,
-    Route
+  BrowserRouter as Router,
+  Switch,
+  Route,
 } from 'react-router-dom';
-import { Home } from './HomePage/Home'
-import { WorkSpacePage } from './WorkSpace/WorkSpacePage';
+import Home from './HomePage/Home';
+import WorkSpace from './WorkSpacePage/WorkSpace';
+import Login from './LoginPage/Login';
 
-
-export function Application() {
-    return (
-        <Router>
-            <Switch>
-                <Route path='/' exact>
-                    <Home/>
-                </Route>
-                <Route path='/content/' exact>
-                    <WorkSpacePage/>
-                </Route>
-            </Switch>
-        </Router>
-    );
+export default function Application() {
+  return (
+    <Router>
+      <Switch>
+        <Route path="/" exact>
+          <Home />
+        </Route>
+        <Route path="/content/" exact>
+          <WorkSpace />
+        </Route>
+        <Route path="/login/" exact>
+          <Login />
+        </Route>
+      </Switch>
+    </Router>
+  );
 }

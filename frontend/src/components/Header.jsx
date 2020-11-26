@@ -1,15 +1,17 @@
 import React from 'react';
-import styles from '../styles/Header.module.css'
+import { Link } from 'react-router-dom';
+import styles from '../styles/Header.module.css';
 
-
-export function Header() {
-    return (
-        <div className={styles.header}>
-            <div className={styles.brandName}>ShareWork</div>
-            <div className={styles.containerHeader}>
-                <div className={styles.userName}>UserName</div>
-                <div className={styles.avatar}/>
-            </div>
-        </div>
-    );
+export default function Header() {
+  return (
+    <div className={styles.header}>
+      <Link to="/">
+        <div className={styles.brandName}>ShareWork</div>
+      </Link>
+      <div className={styles.containerHeader}>
+        <div className={styles.userName}>UserName</div>
+        <div className={styles.avatar} />
+      </div>
+    </div>
+  );
 }
