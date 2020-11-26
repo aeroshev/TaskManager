@@ -5,7 +5,8 @@ import {
   Route,
 } from 'react-router-dom';
 import Home from './HomePage/Home';
-import WorkSpacePage from './WorkSpace/WorkSpacePage';
+import WorkSpace from './WorkSpacePage/WorkSpace';
+import Login from './LoginPage/Login';
 
 export default function Application() {
   return (
@@ -15,7 +16,10 @@ export default function Application() {
           <Home />
         </Route>
         <Route path="/content/" exact>
-          <WorkSpacePage />
+          <WorkSpace />
+        </Route>
+        <Route path="/login/" exact>
+          <Login />
         </Route>
       </Switch>
     </Router>
