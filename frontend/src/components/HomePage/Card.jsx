@@ -1,9 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Card() {
   return (
     <div>
-      Card!
+      <Link to="/content/">
+        Card!
+      </Link>
     </div>
   );
 }

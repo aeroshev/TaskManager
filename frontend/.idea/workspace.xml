@@ -20,17 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a0e278ef-4eaa-4a71-bb63-808b4fb0a2a1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Application.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Application.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/HomePage/Card.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HomePage/Card.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/HomePage/CardList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HomePage/CardList.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/HomePage/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HomePage/Home.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/WorkSpace/WorkSpacePage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/WorkSpace/WorkSpacePage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/Header.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/Header.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/Home.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/Home.module.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +107,7 @@
       <updated>1605986452380</updated>
       <workItem from="1605986454155" duration="78000" />
       <workItem from="1606326294702" duration="2544000" />
-      <workItem from="1606406777115" duration="1889000" />
+      <workItem from="1606406777115" duration="5091000" />
     </task>
     <servers />
   </component>

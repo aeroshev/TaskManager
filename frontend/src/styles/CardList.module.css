@@ -1,0 +1,17 @@
+.cardContainer {
+    display: grid;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2vw;
+}
+
+.cardContainer > div {
+    font-size: 5vw;
+    padding: .5em;
+    background: #F3E3B9;
+    text-align: center;
+    border-radius: .5em;
+    border: 1px solid rgb(112, 112, 112);
+}

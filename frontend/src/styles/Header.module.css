@@ -17,13 +17,15 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+    align-items: center;
+}
+
+.containerHeader > div:last-child {
+    margin-left: .5rem;
 }
 
 .userName {
-    width: auto;
-    text-align: center;
-    margin-top: auto;
-    margin-bottom: auto;
+    color: #F3E3B9;
 }
 
 .avatar {
