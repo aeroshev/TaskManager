@@ -1,16 +1,13 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Card from './Card';
 import styles from '../../styles/CardList.module.css';
 
 export default function CardList(props) {
-  // eslint-disable-next-line react/prop-types
   const { projectsList } = props;
   const list = [];
-
-  // eslint-disable-next-line react/prop-types
-  projectsList.forEach((item, idx) => {
-    // eslint-disable-next-line react/no-array-index-key
-    const project = <Card key={idx} content={item} />;
+  projectsList.forEach((item) => {
+    const project = <Card key={item.id} content={item} />;
     list.push(project);
   });
   return (
@@ -19,3 +16,11 @@ export default function CardList(props) {
     </div>
   );
 }
+
+CardList.defaultProps = {
+  projectsList: [],
+};
+
+CardList.propTypes = {
+  projectsList: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string)),
+};

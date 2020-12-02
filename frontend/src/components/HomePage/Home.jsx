@@ -1,15 +1,16 @@
 import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import Header from '../Header';
 import CardList from './CardList';
 import Footer from '../Footer';
 import styles from '../../styles/Home.module.css';
 
-export default function Home() {
-  const API_URL = 'https://localhost/api/';
+export default function Home(props) {
+  const { url } = props;
   const [projectsList, setProjectsList] = useState([]);
   async function getProjects() {
     try {
-      const response = await fetch(`${API_URL}/projects/`, {
+      const response = await fetch(`${url}/projects/`, {
         method: 'GET',
         mode: 'cors',
         credentials: 'include',
@@ -34,3 +35,7 @@ export default function Home() {
     </div>
   );
 }
+
+Home.propTypes = {
+  url: PropTypes.string.isRequired,
+};

@@ -1,10 +1,13 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { useForm } from 'react-hook-form';
 import styles from '../../styles/Login.module.css';
 
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
-export default function Login() {
+export default function Login(props) {
+  // eslint-disable-next-line no-unused-vars
+  const { url } = props;
   const {
     register,
     handleSubmit,
@@ -31,3 +34,7 @@ export default function Login() {
     </div>
   );
 }
+
+Login.propTypes = {
+  url: PropTypes.string.isRequired,
+};

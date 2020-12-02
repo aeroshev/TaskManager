@@ -9,17 +9,18 @@ import WorkSpace from './WorkSpacePage/WorkSpace';
 import Login from './LoginPage/Login';
 
 export default function Application() {
+  const API_URL = 'https://localhost/api/';
   return (
     <Router>
       <Switch>
         <Route path="/" exact>
-          <Home />
+          <Home url={API_URL} />
         </Route>
         <Route path="/content/" exact>
-          <WorkSpace />
+          <WorkSpace url={API_URL} />
         </Route>
         <Route path="/login/" exact>
-          <Login />
+          <Login url={API_URL} />
         </Route>
       </Switch>
     </Router>
