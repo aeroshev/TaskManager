@@ -1,10 +1,11 @@
 from uuid import uuid4
 
 from django.db import models
+from django.contrib.auth.models import AbstractUser
 from django.db.models.fields.files import FieldFile
 
 
-class User(models.Model):
+class User(AbstractUser):
     """
     Модель данных пользователей
     """
@@ -12,19 +13,6 @@ class User(models.Model):
         primary_key=True,
         default=uuid4,
         editable=False
-    )  # type: str
-    username = models.CharField(
-        max_length=64,
-        unique=True,
-        verbose_name='логин',
-        help_text='логин пользователя'
-    )  # type: str
-    real_name = models.CharField(
-        max_length=254,
-        help_text='реальное имя пользователя'
-    )  # type: str
-    email = models.EmailField(
-        help_text='email пользователя'
     )  # type: str
     avatar = models.ImageField(
         upload_to='',
