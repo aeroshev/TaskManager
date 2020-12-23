@@ -1,6 +1,6 @@
 from rest_framework.serializers import ModelSerializer
 
-from core.models.projects import Project
+from core.models import Project
 
 
 class ProjectSerializer(ModelSerializer):

@@ -9,7 +9,7 @@ from rest_framework.utils.urls import remove_query_param
 class StandardResultsSetPagination(PageNumberPagination):
     page_size = 15
     page_size_query_param = 'page_size'
-    max_page_size = 1000
+    max_page_size = 100
 
     def get_paginated_response(self, data: List[MutableMapping]) -> Response:
         url = self.request.build_absolute_uri()

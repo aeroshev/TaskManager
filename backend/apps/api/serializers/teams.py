@@ -1,6 +1,6 @@
 from rest_framework.serializers import ModelSerializer
 
-from core.models.teams import Team
+from core.models import Team
 
 
 class TeamSerializer(ModelSerializer):

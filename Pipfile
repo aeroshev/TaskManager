@@ -4,22 +4,23 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
-pytest = "*"
-flake8 = "*"
-mypy = "*"
-isort = "*"
+pytest = "==6.2.1"
+flake8 = "==3.8.4"
+mypy = "==0.790"
+isort = "==5.6.4"
 
 [packages]
-django = "*"
-djangorestframework = "*"
-psycopg2-binary = "*"
-python-dotenv = "*"
-gunicorn = "*"
-drf-nested-routers = "*"
-coreapi = "*"
-djoser = "*"
-djangorestframework-simplejwt = "*"
-pillow = "*"
+django = "==3.1.4"
+djangorestframework = "==3.12.2"
+psycopg2-binary = "==2.8.6"
+gunicorn = "==20.0.4"
+drf-nested-routers = "==0.92.5"
+coreapi = "==2.3.3"
+djoser = "==2.1.0"
+djangorestframework-simplejwt = "==4.6.0"
+pillow = "==8.0.1"
+django-configurations = "==2.2"
+dj-database-url = "==0.5.0"
 
 [requires]
 python_version = "3.8"

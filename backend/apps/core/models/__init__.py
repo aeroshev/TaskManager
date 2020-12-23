@@ -4,7 +4,7 @@ from core.models.roles import Role
 from core.models.statuses import Status
 from core.models.tasks import Task
 from core.models.teams import Team
-from core.models.users import User
+from core.models.users import TMAbstractUser, TMUser
 
 __all__ = (
     'Member',
@@ -13,5 +13,6 @@ __all__ = (
     'Status',
     'Task',
     'Team',
-    'User'
+    'TMAbstractUser',
+    'TMUser'
 )
