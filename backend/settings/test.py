@@ -7,7 +7,6 @@ class Test(Base):
     """
     Настройки приложения для тестов
     """
-
     DEBUG = values.BooleanValue(False)
 
     INSTALLED_APPS = values.ListValue([

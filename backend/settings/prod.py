@@ -5,7 +5,7 @@ from backend.settings.base import Base
 
 class Prod(Base):
     """
-
+    Настройки дял продакшн
     """
     DEBUG = values.BooleanValue(False)
 
