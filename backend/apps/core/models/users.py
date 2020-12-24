@@ -79,8 +79,8 @@ class TMAbstractUser(AbstractBaseUser):
         default=False,
         help_text='Суперпользователь'
     )  # type: bool
-    USERNAME_FIELD = 'username'
-    REQUIRED_FIELDS = ['email', 'password']
+    USERNAME_FIELD = 'email'
+    REQUIRED_FIELDS = []
 
     objects = UserManager()
 

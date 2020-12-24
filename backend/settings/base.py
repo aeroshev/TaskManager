@@ -34,8 +34,10 @@ class Base(Configuration):
 
     REST_FRAMEWORK = values.DictValue({
         'DEFAULT_AUTHENTICATION_CLASSES': (
-            'rest_framework_simplejwt.authentication.JWTAuthentication',
             'core.auth.CsrfExemptSessionAuthentication',
+            'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
+            'rest_framework.authentication.SessionAuthentication',
+            'rest_framework.authentication.BasicAuthentication',
         ),
         'DEFAULT_PERMISSION_CLASSES': (
             'rest_framework.permissions.IsAuthenticated',
@@ -53,41 +55,41 @@ class Base(Configuration):
     EMAIL_HOST_PASSWORD = values.Value('')
     EMAIL_PORT = 587
 
-    DJOSER = values.DictValue({
-        'LOGIN_FIELD': 'core.User.username',
-        'PASSWORD_RESET_CONFIRM_URL': '#/password/reset/confirm/{uid}/{token}',
-        'USERNAME_RESET_CONFIRM_URL': '#/username/reset/confirm/{uid}/{token}',
-        'ACTIVATION_URL': '#/activate/{uid}/{token}',
-        'SEND_ACTIVATION_EMAIL': True,
-        'PASSWORD_CHANGED_EMAIL_CONFIRMATION': True,
-        'SERIALIZERS': {},
-    })
-
     # Настройки JSON токенов
-    SIMPLE_JWT = values.DictValue({
-        'ACCESS_TOKEN_LIFETIME': timedelta(minutes=5),
-        'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
-        'ROTATE_REFRESH_TOKENS': False,
-        'BLACKLIST_AFTER_ROTATION': True,
+    JWT_AUTH = values.DictValue({
+        'JWT_ENCODE_HANDLER':
+            'rest_framework_jwt.utils.jwt_encode_handler',
 
-        'ALGORITHM': 'HS256',
-        'SIGNING_KEY': SECRET_KEY,
-        'VERIFYING_KEY': None,
-        'AUDIENCE': None,
-        'ISSUER': None,
+        'JWT_DECODE_HANDLER':
+            'rest_framework_jwt.utils.jwt_decode_handler',
 
-        'AUTH_HEADER_TYPES': ('JWT',),
-        'USER_ID_FIELD': 'id',
-        'USER_ID_CLAIM': 'user_id',
+        'JWT_PAYLOAD_HANDLER':
+            'rest_framework_jwt.utils.jwt_payload_handler',
 
-        'AUTH_TOKEN_CLASSES': ('rest_framework_simplejwt.tokens.AccessToken',),
-        'TOKEN_TYPE_CLAIM': 'token_type',
+        'JWT_PAYLOAD_GET_USER_ID_HANDLER':
+            'rest_framework_jwt.utils.jwt_get_user_id_from_payload_handler',
 
-        'JTI_CLAIM': 'jti',
+        'JWT_RESPONSE_PAYLOAD_HANDLER':
+            'rest_framework_jwt.utils.jwt_response_payload_handler',
 
-        'SLIDING_TOKEN_REFRESH_EXP_CLAIM': 'refresh_exp',
-        'SLIDING_TOKEN_LIFETIME': timedelta(minutes=5),
-        'SLIDING_TOKEN_REFRESH_LIFETIME': timedelta(days=1),
+        'JWT_SECRET_KEY': SECRET_KEY,
+        'JWT_GET_USER_SECRET_KEY': None,
+        'JWT_PUBLIC_KEY': None,
+        'JWT_PRIVATE_KEY': None,
+        'JWT_ALGORITHM': 'HS256',
+        'JWT_VERIFY': True,
+        'JWT_VERIFY_EXPIRATION': True,
+        'JWT_LEEWAY': 0,
+        'JWT_EXPIRATION_DELTA': timedelta(seconds=300),
+        'JWT_AUDIENCE': None,
+        'JWT_ISSUER': None,
+
+        'JWT_ALLOW_REFRESH': False,
+        'JWT_REFRESH_EXPIRATION_DELTA': timedelta(days=7),
+
+        'JWT_AUTH_HEADER_PREFIX': 'JWT',
+        'JWT_AUTH_COOKIE': None,
+
     })
 
     # Локаль, переменная окружения DJANGO_LANGUAGE_CODE, работате когда USE_I18N=True
@@ -127,7 +129,12 @@ class Base(Configuration):
     # Пароль суперюзера от базы
     PG_SUPERUSER_PASS = values.Value('secr3t')
 
-    # TODO CORS
+    # Список правил для проверки сайтов которым разрешено выполнять межсайтовые запросы
+    # Перемнная окружения DJANGO_CORS_ORIGIN_REGEX_WHITELIST
+    CORS_ORIGIN_REGEX_WHITELIST = values.ListValue([r'^.*$'])
+
+    # Разрешить включение cookie при запросах
+    CORS_ALLOW_CREDENTIALS = values.BooleanValue(True)
 
     TEMPLATES = [
         {

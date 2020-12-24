@@ -10,8 +10,6 @@ urlpatterns = [
         TemplateView.as_view(template_name='index.html')
     ),
     path(r'api/', include('api.urls')),
-    path(r'docs/', include_docs_urls()),
-    path(r'auth/', include('djoser.urls')),
-    path(r'auth/', include('djoser.urls.jwt')),
+    path(r'docs/', include_docs_urls())
 ]
 urlpatterns += staticfiles_urlpatterns()

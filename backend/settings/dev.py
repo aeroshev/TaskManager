@@ -19,12 +19,13 @@ class Dev(Base):
         'django.contrib.staticfiles',
         'rest_framework',
         'rest_framework.authtoken',
-        'djoser',
+        'corsheaders',
         'api',
         'core'
     ])
 
     MIDDLEWARE = [
+        'corsheaders.middleware.CorsMiddleware',
         'django.contrib.sessions.middleware.SessionMiddleware',
         'django.contrib.auth.middleware.AuthenticationMiddleware',
         'django.middleware.common.CommonMiddleware',
