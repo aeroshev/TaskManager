@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useForm } from 'react-hook-form';
-import styles from '../../styles/Register.module.css';
 
 export default function Register(props) {
   // eslint-disable-next-line no-unused-vars
@@ -10,8 +9,14 @@ export default function Register(props) {
     register,
     handleSubmit,
   } = useForm();
+
+  const mockFunction = () => {};
   return (
-    <div>Empty</div>
+    <form onSubmit={handleSubmit(mockFunction)}>
+      <input name="email" type="text" placeholder="email" ref={register} />
+      <input name="password" type="password" placeholder="password" ref={register} />
+      <input name="Submit" type="submit" value="Submit" />
+    </form>
   );
 }
 

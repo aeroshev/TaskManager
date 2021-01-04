@@ -6,7 +6,7 @@ import {
 } from 'react-router-dom';
 import Home from './HomePage/Home';
 import WorkSpace from './WorkSpacePage/WorkSpace';
-import Login from './LoginPage/Login';
+import StartPage from './LoginPage/StartPage';
 
 export default function Application() {
   const API_URL = 'https://localhost/api/';
@@ -20,7 +20,7 @@ export default function Application() {
           <WorkSpace url={API_URL} />
         </Route>
         <Route path="/login/" exact>
-          <Login url={API_URL} />
+          <StartPage url={API_URL} />
         </Route>
       </Switch>
     </Router>
