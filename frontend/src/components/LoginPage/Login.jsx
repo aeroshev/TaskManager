@@ -27,9 +27,30 @@ export default function Login(props) {
         <input name="username" type="text" placeholder="username" ref={register} />
         <input name="password" type="password" placeholder="password" ref={register} />
         <input name="Login" type="submit" value="Login" />
-        <p className="message">
-          Not registered?
-        </p>
+        <div className={styles.register}>
+          <p className={styles.message}>
+            Not registered?
+          </p>
+          <p className={styles.message}>
+            Sign In
+          </p>
+        </div>
+        <div className={styles.line}>
+          <hr className={styles.bar} />
+          <span className={styles.text}>Or</span>
+          <hr className={styles.bar} />
+        </div>
+        <div className={styles.method}>
+          <div className={styles.item}>
+            Sign in with Google
+          </div>
+          <div className={styles.item}>
+            Sign in with Facebook
+          </div>
+          <div className={styles.item}>
+            Sign in with VK
+          </div>
+        </div>
       </form>
     </div>
   );
