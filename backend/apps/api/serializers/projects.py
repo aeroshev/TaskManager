@@ -1,9 +1,9 @@
 from rest_framework.serializers import ModelSerializer
 
-from core.models import Team
+from core.models import Project
 
 
-class TeamSerializer(ModelSerializer):
+class ProjectSerializer(ModelSerializer):
     class Meta:
-        model = Team
+        model = Project
         fields = '__all__'

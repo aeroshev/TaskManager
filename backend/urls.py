@@ -9,10 +9,7 @@ urlpatterns = [
         r'^(?!admin|api|docs|media|static).*',
         TemplateView.as_view(template_name='index.html')
     ),
-    path('api/', include('api.urls')),
-    path('docs/', include_docs_urls()),
-    path('auth/', include('djoser.urls')),
-    path('auth/', include('djoser.urls.authtoken')),
-    path('auth/', include('djoser.urls.jwt'))
+    path(r'api/', include('api.urls')),
+    path(r'docs/', include_docs_urls())
 ]
 urlpatterns += staticfiles_urlpatterns()

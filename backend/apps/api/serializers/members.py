@@ -1,6 +1,6 @@
 from rest_framework.serializers import ModelSerializer
 
-from core.models.members import Member
+from core.models import Member
 
 
 class MemberSerializer(ModelSerializer):

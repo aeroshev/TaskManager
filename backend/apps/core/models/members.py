@@ -5,7 +5,7 @@ from django.db import models
 from core.models.roles import Role
 from core.models.tasks import Task
 from core.models.teams import Team
-from core.models.users import User
+from core.models.users import TMUser
 
 
 class Member(models.Model):
@@ -18,7 +18,7 @@ class Member(models.Model):
         editable=False
     )  # type: str
     user = models.ForeignKey(
-        User,
+        TMUser,
         related_name='members',
         on_delete=models.CASCADE,
         help_text='Ссылка на пользователя'

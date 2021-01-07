@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import AuthButton from './Auth/AuthButton';
 import styles from '../styles/Header.module.css';
 
 export default function Header() {
@@ -9,7 +10,7 @@ export default function Header() {
         <div className={styles.brandName}>ShareWork</div>
       </Link>
       <div className={styles.containerHeader}>
-        <div className={styles.userName}>UserName</div>
+        <AuthButton />
         <div className={styles.avatar} />
       </div>
     </div>
