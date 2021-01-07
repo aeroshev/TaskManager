@@ -1,27 +1,28 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { useHistory, useLocation } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
+import { useAuth } from '../Auth/Context';
 import styles from '../../styles/Login.module.css';
-
-const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
 export default function Login(props) {
   // eslint-disable-next-line no-unused-vars
   const { url, handler } = props;
+  const history = useHistory();
+  const location = useLocation();
+  const auth = useAuth();
   const {
     register,
     handleSubmit,
   } = useForm();
-  const onLogin = async (data) => {
-    await sleep(2000);
-    if (data.username === 'bill') {
-      alert(JSON.stringify(data));
-    } else {
-      alert('There is an error');
-    }
+  const { from } = location.state || { from: { pathname: '/home/' } };
+  const login = () => {
+    auth.signin(() => {
+      history.replace(from);
+    });
   };
   return (
-    <form onSubmit={handleSubmit(onLogin)}>
+    <form onSubmit={handleSubmit(login)}>
       <input name="username" type="text" placeholder="username" ref={register} />
       <input name="password" type="password" placeholder="password" ref={register} />
       <input name="Login" type="submit" value="Login" />

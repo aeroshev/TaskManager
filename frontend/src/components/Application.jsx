@@ -7,22 +7,30 @@ import {
 import Home from './HomePage/Home';
 import WorkSpace from './WorkSpacePage/WorkSpace';
 import StartPage from './LoginPage/StartPage';
+import PrivateRoute from './Auth/PrivateRoute';
+import NotFound from './NotFound';
+import ProvideAuth from './Auth/ProvideAuth';
 
 export default function Application() {
   const API_URL = 'https://localhost/api/';
   return (
-    <Router>
-      <Switch>
-        <Route path="/" exact>
-          <Home url={API_URL} />
-        </Route>
-        <Route path="/content/" exact>
-          <WorkSpace url={API_URL} />
-        </Route>
-        <Route path="/login/" exact>
-          <StartPage url={API_URL} />
-        </Route>
-      </Switch>
-    </Router>
+    <ProvideAuth>
+      <Router>
+        <Switch>
+          <PrivateRoute path="/home/" exact>
+            <Home url={API_URL} />
+          </PrivateRoute>
+          <PrivateRoute path="/content/" exact>
+            <WorkSpace url={API_URL} />
+          </PrivateRoute>
+          <Route path="/login/" exact>
+            <StartPage url={API_URL} />
+          </Route>
+          <Route path="*">
+            <NotFound />
+          </Route>
+        </Switch>
+      </Router>
+    </ProvideAuth>
   );
 }
