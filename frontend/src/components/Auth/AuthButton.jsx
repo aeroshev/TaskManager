@@ -1,16 +1,15 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 import { useAuth } from './Context';
+import styles from '../../styles/AuthButton.module.css';
 
 export default function AuthButton() {
   const history = useHistory();
   const auth = useAuth();
 
   return auth.user ? (
-    <p>
-      Welcome!
-      {/* eslint-disable-next-line react/jsx-no-comment-textnodes */}
-      {' '}
+    <p className={styles.hello}>
+      {auth.user}
       {/* eslint-disable-next-line react/button-has-type */}
       <button
         onClick={() => {
@@ -21,6 +20,6 @@ export default function AuthButton() {
       </button>
     </p>
   ) : (
-    <p>You are not logged in.</p>
+    <p className={styles.hello}>You are not logged in.</p>
   );
 }

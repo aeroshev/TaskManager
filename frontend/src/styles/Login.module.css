@@ -87,12 +87,24 @@ h1 {
 
 p {
     color: #8782A2;
+    font-size: 16px;
 }
 
 .register {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
+}
+
+.register button {
+    color: black;
+    text-align: center;
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+    background: none;
+    cursor: pointer;
 }
 
 .line {
@@ -124,13 +136,24 @@ p {
     font-family: "Roboto", sans-serif;
     text-transform: uppercase;
     outline: 0;
-    background: #415BA3;
+    background: #b3b3b3;
     border: 0;
     padding: 15px;
     margin-bottom: 15px;
-    color: #FFFFFF;
+
     font-size: 14px;
     -webkit-transition: all 0.3 ease;
     transition: all 0.3 ease;
     cursor: pointer;
+}
+
+.item .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container p {
+    color: #FFFFFF;
 }
