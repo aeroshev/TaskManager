@@ -7,16 +7,12 @@ cd backend && touch .env
 
 In env file assign the value
 ```
-SECRET_KEY=some-key
-DEV=True
+DJANGO_SECRET_KEY=<some-key>
 
-POSTGRES_ADDRESS=db-address
-POSTGRES_DB=name-db
-POSTGRES_USER=owner-db
-POSTGRES_PASSWORD=db-secret
+DJANGO_EMAIL_HOST_USER=<smtp-address>
+DJANGO_EMAIL_HOST_PASSWORD=<smtp-password>
 
-EMAIL_HOST_USER=smtp-address
-EMAIL_HOST_PASSWORD=smtp-password
+DATABASE_URL=postgres://user:password@address:5432/db
 ```
 ## Certificate for SSL connection
 Either needs install certifications for ssl

@@ -9,13 +9,13 @@ export default function StartPage(props) {
   const [regPage, setRegPage] = useState(false);
   let currentFace = <Login url={url} handler={setRegPage} />;
   if (regPage) {
-    currentFace = <Register url={url} />;
+    currentFace = <Register url={url} handler={setRegPage} />;
   }
 
   return (
     <div className={styles.loginPage}>
       <h1>Share Work</h1>
-      <div>{currentFace}</div>
+      <div className={styles.animation}>{currentFace}</div>
     </div>
   );
 }

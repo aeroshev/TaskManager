@@ -1,0 +1,24 @@
+.hello {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    color: white;
+}
+
+.hello button {
+    margin-left: 1rem;
+    color: white;
+    text-align: center;
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition-duration: 0.4s;
+    background: none;
+    cursor: pointer;
+}
+
+.hello button:hover {
+    border: none;
+    background-color: #99B4FF;
+}

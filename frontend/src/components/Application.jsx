@@ -3,6 +3,7 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
+  Redirect,
 } from 'react-router-dom';
 import Home from './HomePage/Home';
 import WorkSpace from './WorkSpacePage/WorkSpace';
@@ -16,6 +17,7 @@ export default function Application() {
   return (
     <ProvideAuth>
       <Router>
+        <Redirect exact from="/" to="/home/" />
         <Switch>
           <PrivateRoute path="/home/" exact>
             <Home url={API_URL} />
